@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Términos y Condiciones de Eva Shop. Políticas de envíos, cambios, devoluciones y privacidad conforme a la legislación argentina." />
+  <title>Términos y Condiciones | Eva Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>" />
+  <style>
+    /* ── Estilos propios de terminos.html ── */
+    .terms-hero {
+      background: var(--black);
+      color: var(--white);
+      padding: 5rem 5% 4rem;
+      text-align: center;
+    }
+    .terms-hero .eyebrow { color: var(--gold); margin-bottom: .75rem; }
+    .terms-hero h1 { color: var(--white); margin-bottom: 1rem; }
+    .terms-hero p { color: rgba(255,255,255,.65); max-width: 560px; margin: 0 auto; }
+    .terms-hero .updated {
+      display: inline-block;
+      margin-top: 1.25rem;
+      padding: .35rem 1rem;
+      background: rgba(212,175,55,.15);
+      border: 1px solid rgba(212,175,55,.3);
+      border-radius: 50px;
+      font-size: .78rem;
+      color: var(--gold);
+      letter-spacing: .06em;
+    }
+
+    .terms-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 3rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 5%;
+    }
+    .terms-toc {
+      position: sticky;
+      top: 88px;
+      align-self: start;
+    }
+    .terms-toc h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      padding-bottom: .5rem;
+      border-bottom: 2px solid var(--gold);
+    }
+    .terms-toc ul { display: flex; flex-direction: column; gap: .5rem; }
+    .terms-toc a {
+      font-size: .87rem;
+      color: var(--gray-md);
+      transition: color var(--trans);
+      display: block;
+      padding: .3rem 0;
+      border-left: 3px solid transparent;
+      padding-left: .75rem;
+    }
+    .terms-toc a:hover { color: var(--black); border-left-color: var(--gold); }
+
+    .terms-content section {
+      margin-bottom: 3.5rem;
+      scroll-margin-top: 88px;
+    }
+    .terms-content h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: .6rem;
+      border-bottom: 1px solid var(--gray);
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+    .terms-content h2 .section-icon { font-size: 1.3rem; }
+    .terms-content h3 { font-size: 1.05rem; margin: 1.5rem 0 .6rem; color: var(--black); }
+    .terms-content p { margin-bottom: .9rem; font-size: .93rem; line-height: 1.8; }
+    .terms-content ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      margin: .75rem 0 1rem;
+    }
+    .terms-content ul li {
+      font-size: .93rem;
+      line-height: 1.7;
+      padding-left: 1.5rem;
+      position: relative;
+      color: #444;
+    }
+    .terms-content ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 1.2rem;
+      line-height: 1.4;
+      font-weight: 700;
+    }
+    .terms-content strong { color: var(--black); }
+
+    .info-box {
+      background: #fdf8e8;
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+      font-size: .9rem;
+      line-height: 1.7;
+      color: #555;
+    }
+    .info-box strong { color: var(--black); display: block; margin-bottom: .25rem; }
+
+    .warning-box {
+      background: #fff5f5;
+      border-left: 4px solid #e55;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+      font-size: .9rem;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .contact-cta {
+      background: var(--black);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .contact-cta h3 { color: var(--white); margin-bottom: .5rem; }
+    .contact-cta p { color: rgba(255,255,255,.65); margin-bottom: 1.5rem; }
+
+    @media (max-width: 768px) {
+      .terms-layout { grid-template-columns: 1fr; }
+      .terms-toc { position: static; display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <a href="index.html" class="navbar-logo">Eva<span>Shop</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="navbar-menu" id="navMenu" role="menubar">
+      <li><a href="index.html" role="menuitem">Inicio</a></li>
+      <li><a href="index.html#categorias" role="menuitem">Indumentaria</a></li>
+      <li><a href="index.html#categorias" role="menuitem">Accesorios</a></li>
+      <li><a href="index.html#contacto" role="menuitem">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="terms-hero">
+    <p class="eyebrow" style="font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;">Documentos legales</p>
+    <h1>Términos y Condiciones</h1>
+    <p>Tu confianza es nuestra prioridad. Aquí encontrarás toda la información sobre nuestras políticas de manera clara y transparente.</p>
+    <span class="updated">📅 Última actualización: Enero 2026</span>
+  </div>
+  <div class="gold-stripe"></div>
+
+  <!-- CONTENIDO + TOC -->
+  <div class="terms-layout">
+
+    <!-- Tabla de contenidos -->
+    <aside class="terms-toc" aria-label="Tabla de contenidos">
+      <h4>Contenidos</h4>
+      <ul>
+        <li><a href="#general">1. Disposiciones generales</a></li>
+        <li><a href="#envios">2. Política de envíos</a></li>
+        <li><a href="#cambios">3. Cambios y devoluciones</a></li>
+        <li><a href="#pagos">4. Medios de pago</a></li>
+        <li><a href="#privacidad">5. Privacidad de datos</a></li>
+        <li><a href="#cookies">6. Política de cookies</a></li>
+        <li><a href="#propiedad">7. Propiedad intelectual</a></li>
+        <li><a href="#jurisdiccion">8. Ley aplicable</a></li>
+      </ul>
+    </aside>
+
+    <!-- Artículos -->
+    <main class="terms-content" id="main-content">
+
+      <!-- 1. GENERAL -->
+      <section id="general">
+        <h2><span class="section-icon">📋</span> 1. Disposiciones Generales</h2>
+        <p>
+          Los presentes Términos y Condiciones regulan el uso del sitio web y los servicios de compraventa ofrecidos por
+          <strong>Eva Shop</strong> (en adelante "Eva Shop", "nosotros" o "la marca"), con domicilio en la
+          Ciudad Autónoma de Buenos Aires, Argentina.
+        </p>
+        <p>
+          Al realizar una compra o navegar por nuestro sitio web, el usuario declara haber leído, entendido y aceptado la
+          totalidad de estos términos. Si no estás de acuerdo con alguna de las condiciones aquí descriptas,
+          te pedimos que no realices compras en nuestro sitio.
+        </p>
+        <h3>1.1 Capacidad legal</h3>
+        <p>
+          Solo pueden comprar en Eva Shop personas físicas con capacidad legal para contratar conforme al Código Civil
+          y Comercial de la Nación Argentina (Ley 26.994). Al realizar una compra, el usuario declara ser mayor de 18 años
+          o actuar con autorización de su representante legal.
+        </p>
+        <h3>1.2 Modificación de términos</h3>
+        <p>
+          Eva Shop se reserva el derecho de modificar estos Términos y Condiciones en cualquier momento.
+          Las modificaciones serán publicadas en este mismo sitio con indicación de la fecha de actualización.
+          El uso continuado del sitio implica la aceptación de los nuevos términos.
+        </p>
+      </section>
+
+      <!-- 2. ENVÍOS -->
+      <section id="envios">
+        <h2><span class="section-icon">🚚</span> 2. Política de Envíos</h2>
+
+        <h3>2.1 Cobertura</h3>
+        <p>Realizamos envíos a <strong>todo el territorio argentino</strong>, incluyendo zonas del interior del país.</p>
+
+        <h3>2.2 Operadores logísticos</h3>
+        <p>Los envíos se realizan a través de:</p>
+        <ul>
+          <li><strong>Mercado Envíos</strong> (operador principal, con seguimiento en tiempo real)</li>
+          <li>Correo privado según disponibilidad de zona</li>
+          <li>Retiro en punto de entrega coordinado previamente</li>
+        </ul>
+
+        <h3>2.3 Tiempos estimados</h3>
+        <ul>
+          <li><strong>AMBA (CABA y GBA):</strong> 2 a 4 días hábiles</li>
+          <li><strong>Interior provincia de Buenos Aires:</strong> 3 a 5 días hábiles</li>
+          <li><strong>Interior del país:</strong> 5 a 10 días hábiles</li>
+        </ul>
+
+        <div class="info-box">
+          <strong>⚠️ Importante</strong>
+          Los tiempos de entrega son estimados y pueden verse afectados por factores externos como condiciones climáticas, feriados o la capacidad operativa del correo. Eva Shop no se responsabiliza por demoras imputables al operador logístico.
+        </div>
+
+        <h3>2.4 Costo del envío</h3>
+        <p>
+          El costo de envío se calcula de forma automática al finalizar la compra, en base al código postal de destino
+          y al peso/volumen del paquete. Podrán aplicarse <strong>envíos bonificados o gratuitos</strong> según
+          promociones vigentes.
+        </p>
+
+        <h3>2.5 Seguimiento del pedido</h3>
+        <p>
+          Una vez despachado el pedido, se te notificará por correo electrónico o WhatsApp con el número de seguimiento.
+          Podés rastrear tu envío directamente en la plataforma de Mercado Envíos o en el sitio del correo correspondiente.
+        </p>
+      </section>
+
+      <!-- 3. CAMBIOS Y DEVOLUCIONES -->
+      <section id="cambios">
+        <h2><span class="section-icon">🔄</span> 3. Cambios y Devoluciones</h2>
+
+        <h3>3.1 Derecho de arrepentimiento</h3>
+        <p>
+          Conforme al artículo 34 de la Ley de Defensa del Consumidor (Ley 24.240 y modificatorias), el consumidor
+          tiene derecho a revocar la compra realizada a distancia dentro de los <strong>10 días corridos</strong>
+          contados desde la recepción del producto, sin necesidad de expresar causa.
+        </p>
+        <p>
+          En caso de ejercer este derecho, Eva Shop reintegrará el importe abonado, descontando los gastos de envío
+          de devolución cuando corresponda.
+        </p>
+
+        <h3>3.2 Cambio de talle</h3>
+        <p>Aceptamos cambios de talle dentro de los <strong>30 días corridos</strong> desde la recepción, siempre que:</p>
+        <ul>
+          <li>La prenda esté sin uso y sin lavado</li>
+          <li>Conserve todas sus etiquetas originales</li>
+          <li>Se encuentre en su empaque original en perfectas condiciones</li>
+          <li>No haya sido adquirida en liquidación o con descuento especial indicado como "sin cambio"</li>
+        </ul>
+        <p>Los gastos de envío por cambio de talle corren por cuenta del cliente.</p>
+
+        <h3>3.3 Defectos de fabricación</h3>
+        <p>
+          Si el producto presenta defectos de fabricación, Eva Shop se hace cargo del <strong>100% de los costos</strong>
+          de reenvío y reemplazo. Debés notificarnos dentro de los <strong>7 días hábiles</strong> de recibir el producto
+          con fotos del defecto vía WhatsApp o email.
+        </p>
+
+        <div class="warning-box">
+          <strong>❌ No se aceptan cambios ni devoluciones en los siguientes casos:</strong><br>
+          Prendas usadas, lavadas o alteradas · Productos en liquidación marcados "sin cambio" ·
+          Accesorios íntimos por razones de higiene · Daños causados por mal uso del cliente
+        </div>
+
+        <h3>3.4 Proceso de cambio o devolución</h3>
+        <ul>
+          <li>Contactarse con Eva Shop vía WhatsApp o email indicando número de pedido y motivo</li>
+          <li>Aguardar confirmación y las instrucciones de envío</li>
+          <li>Enviar el producto con el embalaje indicado</li>
+          <li>El reemplazo o reintegro se procesa dentro de los 5 días hábiles de recibido el paquete</li>
+        </ul>
+      </section>
+
+      <!-- 4. MEDIOS DE PAGO -->
+      <section id="pagos">
+        <h2><span class="section-icon">💳</span> 4. Medios de Pago</h2>
+        <p>Eva Shop acepta los siguientes medios de pago:</p>
+        <ul>
+          <li><strong>Mercado Pago:</strong> tarjetas de crédito y débito, saldo MP, código QR</li>
+          <li><strong>Tarjetas de crédito en cuotas:</strong> hasta 12 cuotas sin interés según banco y promociones vigentes</li>
+          <li><strong>Transferencia bancaria / CBU:</strong> se envían los datos al confirmar el pedido</li>
+          <li><strong>Efectivo:</strong> disponible solo para retiro coordinado en punto de entrega</li>
+        </ul>
+        <div class="info-box">
+          <strong>🔒 Seguridad de pagos</strong>
+          Todos los pagos online se procesan a través de la plataforma segura de Mercado Pago, que cumple con los estándares PCI-DSS. Eva Shop no almacena datos de tarjetas en sus servidores.
+        </div>
+        <p>
+          Los precios publicados en el sitio son en pesos argentinos (ARS) e incluyen IVA. Eva Shop se reserva el derecho de
+          modificar los precios sin previo aviso, pero el precio confirmado al momento de la compra es el que rige.
+        </p>
+      </section>
+
+      <!-- 5. PRIVACIDAD -->
+      <section id="privacidad">
+        <h2><span class="section-icon">🔐</span> 5. Política de Privacidad de Datos Personales</h2>
+        <p>
+          Esta política de privacidad se enmarca en la <strong>Ley N.º 25.326 de Protección de los Datos Personales</strong>
+          de la República Argentina y su decreto reglamentario.
+        </p>
+
+        <h3>5.1 Responsable del tratamiento</h3>
+        <p>
+          <strong>Eva Shop</strong> es la responsable de la base de datos y del tratamiento de los datos personales recopilados
+          a través de este sitio web.
+        </p>
+
+        <h3>5.2 Datos que recopilamos</h3>
+        <p>Recopilamos los siguientes datos personales cuando realizás una compra o nos contactás:</p>
+        <ul>
+          <li>Nombre y apellido</li>
+          <li>Dirección de correo electrónico</li>
+          <li>Número de teléfono / WhatsApp</li>
+          <li>Domicilio de entrega (calle, número, localidad, provincia, código postal)</li>
+          <li>Datos de facturación cuando se solicita comprobante</li>
+        </ul>
+
+        <h3>5.3 Finalidad del tratamiento</h3>
+        <ul>
+          <li>Procesar y gestionar tu pedido</li>
+          <li>Coordinar el envío y seguimiento</li>
+          <li>Comunicarnos ante consultas o novedades de tu compra</li>
+          <li>Enviarte información comercial de Eva Shop (con posibilidad de darte de baja en cualquier momento)</li>
+          <li>Cumplimiento de obligaciones legales y fiscales</li>
+        </ul>
+
+        <h3>5.4 Compartición de datos</h3>
+        <p>
+          Eva Shop no vende, alquila ni cede datos personales a terceros, excepto cuando resulte necesario para:
+        </p>
+        <ul>
+          <li>Procesar pagos (Mercado Pago, entidades bancarias)</li>
+          <li>Coordinar el envío (operadores logísticos)</li>
+          <li>Cumplir con requerimientos legales de autoridades competentes</li>
+        </ul>
+
+        <h3>5.5 Derechos del titular</h3>
+        <p>
+          Conforme a la Ley 25.326, el titular de los datos tiene derecho a acceder, rectificar, actualizar y suprimir
+          sus datos personales. Para ejercer estos derechos, podés escribirnos a <strong>hola@evashop.com.ar</strong>
+          o por WhatsApp, indicando tu nombre completo y el derecho que deseás ejercer.
+        </p>
+        <div class="info-box">
+          <strong>📌 Aviso AAIP</strong>
+          La Agencia de Acceso a la Información Pública (AAIP) es el organismo de control de la Ley 25.326. El titular tiene la facultad de ejercer el derecho de acceso a sus datos en forma gratuita a intervalos no inferiores a seis meses.
+        </div>
+
+        <h3>5.6 Seguridad de los datos</h3>
+        <p>
+          Eva Shop adopta medidas técnicas y organizativas razonables para proteger los datos personales contra el
+          acceso no autorizado, pérdida o alteración. Sin embargo, ninguna transmisión por internet es absolutamente
+          segura, por lo que no podemos garantizar la seguridad absoluta.
+        </p>
+
+        <h3>5.7 Conservación de datos</h3>
+        <p>
+          Los datos se conservarán durante el tiempo necesario para cumplir con la finalidad de la recopilación y
+          las obligaciones legales aplicables. Una vez cumplida dicha finalidad, los datos serán eliminados o anonimizados.
+        </p>
+      </section>
+
+      <!-- 6. COOKIES -->
+      <section id="cookies">
+        <h2><span class="section-icon">🍪</span> 6. Política de Cookies</h2>
+        <p>
+          Nuestro sitio utiliza cookies y tecnologías similares para mejorar la experiencia de navegación,
+          analizar el uso del sitio y personalizar contenidos.
+        </p>
+
+        <h3>Tipos de cookies que usamos</h3>
+        <ul>
+          <li><strong>Esenciales:</strong> Necesarias para el funcionamiento básico del sitio (carrito, sesión)</li>
+          <li><strong>Analíticas:</strong> Nos ayudan a entender cómo los usuarios interactúan con el sitio (Google Analytics)</li>
+          <li><strong>De preferencias:</strong> Recuerdan tus configuraciones de accesibilidad y aceptación de cookies</li>
+        </ul>
+        <p>
+          Podés gestionar o eliminar las cookies en cualquier momento desde la configuración de tu navegador.
+          Ten en cuenta que deshabilitar cookies esenciales puede afectar el correcto funcionamiento del sitio.
+        </p>
+      </section>
+
+      <!-- 7. PROPIEDAD INTELECTUAL -->
+      <section id="propiedad">
+        <h2><span class="section-icon">©️</span> 7. Propiedad Intelectual</h2>
+        <p>
+          Todos los contenidos del sitio web de Eva Shop, incluyendo pero no limitado a textos, fotografías,
+          ilustraciones, logotipos, diseños y código fuente, son propiedad exclusiva de Eva Shop o de sus
+          licenciantes, y están protegidos por la legislación argentina e internacional en materia de propiedad intelectual.
+        </p>
+        <p>
+          Queda expresamente prohibida la reproducción, distribución, modificación o uso comercial de cualquier
+          contenido sin autorización escrita previa de Eva Shop.
+        </p>
+      </section>
+
+      <!-- 8. JURISDICCIÓN -->
+      <section id="jurisdiccion">
+        <h2><span class="section-icon">⚖️</span> 8. Ley Aplicable y Jurisdicción</h2>
+        <p>
+          Los presentes Términos y Condiciones se rigen por las leyes de la República Argentina. Para la resolución
+          de cualquier controversia derivada del uso de este sitio o de la relación comercial entre Eva Shop y sus
+          clientes, las partes se someten a la jurisdicción de los <strong>Tribunales Ordinarios de la Ciudad Autónoma
+          de Buenos Aires</strong>, con renuncia a cualquier otro fuero que pudiere corresponder.
+        </p>
+        <p>
+          En caso de controversias de consumo, el cliente tiene derecho a recurrir al
+          <strong>Sistema de Resolución de Conflictos de Consumo (COPREC)</strong> y a la
+          Dirección General de Defensa y Protección del Consumidor del GCBA.
+        </p>
+
+        <!-- CTA contacto -->
+        <div class="contact-cta">
+          <h3>¿Tenés alguna consulta?</h3>
+          <p>Estamos para ayudarte. Respondemos en menos de 24 horas hábiles.</p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+            <a
+              href="https://wa.me/5491100000000?text=Hola!%20Tengo%20una%20consulta%20sobre%20los%20T%C3%A9rminos%20y%20Condiciones%20de%20Eva%20Shop."
+              class="btn btn-wa"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              WhatsApp
+            </a>
+            <a href="mailto:hola@evashop.com.ar" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.4);">
+              📧 Email
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <a href="index.html" class="navbar-logo" style="font-size:1.2rem;">Eva<span style="color:var(--gold);">Shop</span></a>
+      <span style="font-size:.82rem;">
+        Buenos Aires, Argentina · © 2026 Eva Shop. Todos los derechos reservados.
+      </span>
+      <a href="index.html" style="font-size:.85rem;color:var(--gold);">← Volver al inicio</a>
+    </div>
+  </footer>
+
+  <!-- WA flotante -->
+  <a
+    href="https://wa.me/5491100000000?text=Hola!%20Tengo%20una%20consulta."
+    class="wa-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contactar por WhatsApp"
+  >
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <script>
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navMenu   = document.getElementById('navMenu');
+    hamburger.addEventListener('click', () => {
+      const open = hamburger.classList.toggle('open');
+      navMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>
