@@ -37,14 +37,14 @@
   <section class="hero" aria-label="Portada Eva Shop">
     <div class="hero-image">
       <img
-        src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=900&q=80&auto=format&fit=crop"
-        alt="Modelo femenina con indumentaria premium Eva Shop"
+        src="image0.jpeg"
+        alt="Nueva Colección Otoño 2026 Eva Shop"
         loading="eager"
       />
     </div>
 
     <div class="hero-content">
-      <p class="hero-eyebrow">Nueva colección 2026</p>
+      <p class="hero-eyebrow">Nueva colección Otoño 2026</p>
       <h1>La elegancia<br>de ser <em>vos</em></h1>
       <p>Curaduría exclusiva de prendas atemporales diseñadas para la mujer que sabe lo que quiere.</p>
       
@@ -81,7 +81,26 @@
   </a>
 
   <script>
-    // Tu código JavaScript para el menú hamburger, FAQ, etc.
+    // --- Lógica del Hamburger Menu ---
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+      hamburger.setAttribute('aria-expanded', !expanded);
+      navMenu.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+
+    // --- Accesibilidad ---
+    let fontSize = 16;
+    document.getElementById('btnTextSize').addEventListener('click', () => {
+      fontSize = fontSize >= 20 ? 14 : fontSize + 2;
+      document.documentElement.style.fontSize = fontSize + 'px';
+    });
+    document.getElementById('btnContrast').addEventListener('click', () => {
+      document.body.classList.toggle('high-contrast');
+    });
   </script>
 
 </body>
